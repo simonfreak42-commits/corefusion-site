@@ -17,18 +17,47 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-light); color: var(--midnight-navy); line-height: 1.6; }
         .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
-        header { text-align: center; padding: 60px 20px; background-color: var(--midnight-navy); color: var(--crisp-white); border-radius: 12px; margin-bottom: 40px; }
+        
+        /* Updated Hero Header Design System */
+        header { 
+            text-align: center; 
+            padding: 50px 20px; 
+            background-color: var(--midnight-navy); 
+            color: var(--crisp-white); 
+            border-radius: 12px; 
+            margin-bottom: 40px; 
+        }
+        .logo-asset {
+            width: 100%;
+            max-width: 180px;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+        .brand-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--crisp-white);
+            font-family: 'Inter', sans-serif;
+            margin: 5px 0 20px 0;
+            letter-spacing: -0.5px;
+        }
+        .brand-title span {
+            color: var(--electric-cyan);
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 400;
+        }
+        
         .mono { font-family: 'Roboto Mono', monospace; color: var(--electric-cyan); font-weight: bold; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; }
-        h1 { font-size: 2.8rem; font-weight: 800; margin: 10px 0 20px 0; color: var(--crisp-white); }
-        .lead { font-size: 1.25rem; color: #94A3B8; max-width: 800px; margin: 0 auto 30px auto; }
+        .lead { font-size: 1.2rem; color: #94A3B8; max-width: 800px; margin: 0 auto 30px auto; line-height: 1.6; }
         .btn { display: inline-block; background-color: var(--electric-cyan); color: var(--midnight-navy); padding: 14px 28px; font-weight: 600; text-decoration: none; border-radius: 6px; transition: transform 0.2s; }
         .btn:hover { transform: translateY(-2px); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1max)); gap: 30px; margin-top: 40px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
         .card { background: var(--crisp-white); padding: 30px; border-radius: 8px; border: 1px solid #E2E8F0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
         .card h3 { font-size: 1.4rem; margin-bottom: 15px; color: var(--midnight-navy); }
         .impact-section { background-color: #020617; color: var(--crisp-white); padding: 50px 30px; border-radius: 12px; margin: 40px 0; text-align: center; }
         .impact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px; }
-        @media(max-width: 768px) { .impact-grid { grid-template-columns: 1fr; } h1 { font-size: 2rem; } }
+        @media(max-width: 768px) { .impact-grid { grid-template-columns: 1fr; } .brand-title { font-size: 1.6rem; } }
         .impact-box { padding: 20px; border-radius: 6px; background: #0f172a; border-left: 4px solid #ef4444; text-align: left; }
         .impact-box.good { border-left-color: var(--electric-cyan); }
         .impact-box h4 { font-family: 'Roboto Mono', monospace; margin-bottom: 10px; font-size: 1.1rem; }
@@ -37,15 +66,12 @@
 <body>
     <div class="container">
         <header>
-                    <header style="text-align: center; padding: 40px 20px; background-color: var(--midnight-navy); color: var(--crisp-white); border-radius: 12px; margin-bottom: 40px;">
-            <!-- Brand Logo Integration Asset -->
-            <img src="logo.png" alt="Core Fusion IoT Logo" style="width: 100%; max-width: 180px; height: auto; margin-bottom: 15px; border-radius: 8px;">
-            <p class="mono" style="margin-top: 10px;">Agnostic Edge Infrastructure</p>
-            <h2 style="font-size: 1.5rem; color: var(--electric-cyan); margin: 5px 0 20px 0; font-family: 'Roboto Mono', monospace;">CORE FUSION IoT</h2>
-            <p class="lead" style="font-size: 1.15rem; color: #94A3B8; max-width: 800px; margin: 0 auto 30px auto; line-height: 1.5;">We deploy standalone, hardware-agnostic data boxes that fuse local machine sensors with real-time GPS tracking, execute edge anomaly analysis, and optimize data streams before they reach your AWS cloud.</p>
+            <!-- Integrated Preferred High-Tech Logo File -->
+            <img src="logo.png" alt="Core Fusion IoT Logo" class="logo-asset">
+            <p class="mono">Agnostic Edge Infrastructure</p>
+            <h1 class="brand-title">CORE FUSION <span>IoT</span></h1>
+            <p class="lead">We deploy standalone, hardware-agnostic data boxes that fuse local machine sensors with real-time GPS tracking, execute edge anomaly analysis, and optimize data streams before they reach your AWS cloud.</p>
             <a href="YOUR_CALENDLY_LINK_HERE" class="btn">Book a Technical Feasibility Call</a>
-        </header>
-
         </header>
 
         <section class="impact-section">
@@ -73,7 +99,7 @@
             <div class="card">
                 <p class="mono" style="font-size:0.8rem; margin-bottom:5px;">Phase 02</p>
                 <h3>End-to-End PoC Deployment</h3>
-                <p style="color: var(--slate-grey);">A fully functional 30-day trial box dropped onto your local local machine network switch, bound to your AWS instance with a live tracking dashboard.</p>
+                <p style="color: var(--slate-grey);">A fully functional 30-day trial box dropped onto your local machine network switch, bound to your AWS instance with a live tracking dashboard.</p>
             </div>
             <div class="card">
                 <p class="mono" style="font-size:0.8rem; margin-bottom:5px;">Phase 03</p>
