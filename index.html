@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Fusion IoT - Agnostic Edge Gateways</title>
+    <link rel="stylesheet" href="https://googleapis.com">
+    <style>
+        :root {
+            --midnight-navy: #0F172A;
+            --electric-cyan: #06B6D4;
+            --charcoal-black: #1E293B;
+            --slate-grey: #64748B;
+            --crisp-white: #FFFFFF;
+            --bg-light: #F8FAFC;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-light); color: var(--midnight-navy); line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        header { text-align: center; padding: 60px 20px; background-color: var(--midnight-navy); color: var(--crisp-white); border-radius: 12px; margin-bottom: 40px; }
+        .mono { font-family: 'Roboto Mono', monospace; color: var(--electric-cyan); font-weight: bold; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; }
+        h1 { font-size: 2.8rem; font-weight: 800; margin: 10px 0 20px 0; color: var(--crisp-white); }
+        .lead { font-size: 1.25rem; color: #94A3B8; max-width: 800px; margin: 0 auto 30px auto; }
+        .btn { display: inline-block; background-color: var(--electric-cyan); color: var(--midnight-navy); padding: 14px 28px; font-weight: 600; text-decoration: none; border-radius: 6px; transition: transform 0.2s; }
+        .btn:hover { transform: translateY(-2px); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1max)); gap: 30px; margin-top: 40px; }
+        .card { background: var(--crisp-white); padding: 30px; border-radius: 8px; border: 1px solid #E2E8F0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .card h3 { font-size: 1.4rem; margin-bottom: 15px; color: var(--midnight-navy); }
+        .impact-section { background-color: #020617; color: var(--crisp-white); padding: 50px 30px; border-radius: 12px; margin: 40px 0; text-align: center; }
+        .impact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px; }
+        @media(max-width: 768px) { .impact-grid { grid-template-columns: 1fr; } h1 { font-size: 2rem; } }
+        .impact-box { padding: 20px; border-radius: 6px; background: #0f172a; border-left: 4px solid #ef4444; text-align: left; }
+        .impact-box.good { border-left-color: var(--electric-cyan); }
+        .impact-box h4 { font-family: 'Roboto Mono', monospace; margin-bottom: 10px; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <p class="mono">Agnostic Edge Infrastructure</p>
+            <h1>CORE FUSION IoT</h1>
+            <p class="lead">We deploy standalone, hardware-agnostic data boxes that fuse local machine sensors with real-time GPS tracking, execute edge anomaly analysis, and optimize data streams before they reach your AWS cloud.</p>
+            <a href="YOUR_CALENDLY_LINK_HERE" class="btn">Book a Technical Feasibility Call</a>
+        </header>
+
+        <section class="impact-section">
+            <p class="mono" style="color: #94A3B8;">The Operational Math</p>
+            <h2 style="margin-top:10px;">Edge Filtering vs. Raw Ingestion</h2>
+            <div class="impact-grid">
+                <div class="impact-box">
+                    <h4 style="color:#ef4444;">❌ The Status Quo</h4>
+                    <p style="color:#94A3B8;">Streaming continuous uncompressed telemetry chokes remote cellular bandwidth and drives up unmanageable AWS IoT Core transaction fees.</p>
+                </div>
+                <div class="impact-box good">
+                    <h4 style="color:var(--electric-cyan);">🚀 The Core Fusion Way</h4>
+                    <p style="color:#94A3B8;">Local processing screens out repetitive noise. Your system buffers securely at the edge, transferring only high-priority events, cutting ingestion costs by up to 70%.</p>
+                </div>
+            </div>
+        </section>
+
+        <h2 style="text-align:center; margin-top:60px;">Our Enterprise Deployments</h2>
+        <div class="grid">
+            <div class="card">
+                <p class="mono" style="font-size:0.8rem; margin-bottom:5px;">Phase 01</p>
+                <h3>The Data Infrastructure Audit</h3>
+                <p style="color: var(--slate-grey);">We analyze your physical estate and provide an architecture blueprint demonstrating exactly how much bandwidth and cloud compute overhead you will eliminate.</p>
+            </div>
+            <div class="card">
+                <p class="mono" style="font-size:0.8rem; margin-bottom:5px;">Phase 02</p>
+                <h3>End-to-End PoC Deployment</h3>
+                <p style="color: var(--slate-grey);">A fully functional 30-day trial box dropped onto your local local machine network switch, bound to your AWS instance with a live tracking dashboard.</p>
+            </div>
+            <div class="card">
+                <p class="mono" style="font-size:0.8rem; margin-bottom:5px;">Phase 03</p>
+                <h3>Fleet-Wide Orchestration</h3>
+                <p style="color: var(--slate-grey);">Ruggedized, DIN-rail mounted hardware panels preconfigured with containerized failover environments and zero-touch IT provisioning.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
